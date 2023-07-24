@@ -49,37 +49,41 @@ Add it in your root build.gradle at the end of repositories:
   ```
 
 
-    2. Initialize Zamplia SDK
+2. Initialize Zamplia SDK
 
-        After syncing your project with gradle files and importing Zamplia SDK classes you can easily initialize Zamplia SDK. To initialize, use the following code snippet in onCreate method of your activity. Use Environment Enum for sandbox/production.  
+After syncing your project with gradle files and importing Zamplia SDK classes you can easily initialize Zamplia SDK. <br/>To initialize, use the following code snippet in onCreate method of your activity. <br/>Use Environment Enum for sandbox/production.  
 
-        ```groovy
-            ZampliaApp.getInstance().initialize(this,  Environment.PRODUCTION);
-        ```
+
+  ```groovy
+    ZampliaApp.getInstance().initialize(this,  Environment.PRODUCTION);
+  ```
     
-    3. Show Offer
+3. Show Offer
 
-        Create Params instance with the below code snippet. Here, you need to pass API-KEY that is provided to you by Zamplia platform. You have to use sandbox key with sandbox environment and production key with production enviornment. Here you have to set Platform and transaction Id (session id to track the user). Code snippet as below :
+Create Params instance with the below code snippet. Here, you need to pass API-KEY that is provided to you by Zamplia platform. <br/>You have to use sandbox key with sandbox environment and production key with production enviornment. <br/>Here you have to set Platform and transaction Id (session id to track the user). <br/><b>Code snippet as below :<b/>
 
-        ```groovy
-            Params mParams = new Params.Builder("API-KEY").setPlatform("Android").
+
+  ```groovy
+    Params mParams = new Params.Builder("API-KEY").setPlatform("Android").
                             setTransactionId("SESSON-ID").build();
-        ```
+  ```
 
-        After creating instance of Params to get the offer use the below code snippet : 
+After creating instance of Params to get the offer use the below code snippet : 
 
-        ```groovy
-            ZampliaApp.showAvailableSurveys(this, mParams, this);
-        ```
 
-    4. Get Events from Zamplia SDK
+  ```groovy
+    ZampliaApp.showAvailableSurveys(this, mParams, this);
+  ```
 
-        We have the following listeners. To use this you have to implement ZampliaCallbacks interface in your activity.
+4. Get Events from Zamplia SDK
 
-        ```groovy
-            AppCompatActivity implements ZampliaCallbacks
-        ```
+We have the following listeners. To use this you have to implement ZampliaCallbacks interface in your activity.
 
-        The following are the methods this will override :
+
+  ```groovy
+    AppCompatActivity implements ZampliaCallbacks
+  ```
+
+## Zamplia SDK lifeCycle methods : 
 
 
