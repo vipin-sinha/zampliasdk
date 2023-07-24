@@ -176,7 +176,7 @@ We have the following listeners. To use this you have to implement ZampliaCallba
         @Override
         public void onZAMSurveyCompleted(SurveyData surveyInfo){
             Log.e("SurveyId", surveyInfo.getSurveyId());
-            Log.e("RewardValue", surveyInfo.getCpi());
+            Log.e("RewardValue", surveyInfo.getCpi()); 
             ...
         }
     }
