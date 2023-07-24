@@ -84,6 +84,17 @@ We have the following listeners. To use this you have to implement ZampliaCallba
     AppCompatActivity implements ZampliaCallbacks
   ```
 
-## Zamplia SDK lifeCycle methods : 
+### Zamplia SDK lifeCycle methods : 
+
+1. If Zamplia SDK is failed while initialization process then this event will receive. Ex.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMInitializationFailed() {
+            ...
+        }
+    }
+  ```
 
 
