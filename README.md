@@ -175,6 +175,8 @@ We have the following listeners. To use this you have to implement ZampliaCallba
     public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
         @Override
         public void onZAMSurveyCompleted(SurveyData surveyInfo){
+            Log.e("SurveyId", surveyInfo.getSurveyId());
+            Log.e("RewardValue", surveyInfo.getCpi());
             ...
         }
     }
