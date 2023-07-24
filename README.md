@@ -97,4 +97,123 @@ We have the following listeners. To use this you have to implement ZampliaCallba
     }
   ```
 
+2. If Offers are not enabled in any specific cultures. Ex. <br/>Let's assume that Zamplia has not Enabled your users to take offers in USA and your user is from USA than this will receive with error message.
+
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMCultureNotEnabled(String message) {
+            ...
+        }
+    }
+  ```
+
+3. If Zamplia SDK has traced or facing any loading error than this will be invoked with error.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMInternalServerError(String message) {
+            ...
+        }
+    }
+  ```
+
+
+4. You can be notified when Zamplia survey not available for the user.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMSurveyNotAvailable() {
+            ...
+        }
+    }
+  ```
+
+
+5. We will notify you when user start survey with Survey data where you can get ID and reward value of survey.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMUserOpenedSurvey(SurveyData surveyData) {
+            ...
+        }
+    }
+  ```
+
+
+6. You can be notified if user has closed the offer/survey window.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMWindowClosed() {
+            ...
+        }
+    }
+  ```
+
+
+7. You can be notified if user has left the current survey in middle and closed the window.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMUserRejectedSurvey() {
+            ...
+        }
+    }
+  ```
+
+
+8. We will notify when user gets complete the survey. We will send here SurveyData as well where ID and reward value you will receive.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMSurveyCompleted(SurveyData surveyInfo){
+            ...
+        }
+    }
+  ```
+
+
+9. We will notify if user get terminated.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMTerminated() {
+            ...
+        }
+    }
+  ```
+
+
+10. We will notify if user traced in security fails.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMSecurityFailed() {
+            ...
+        }
+    }
+  ```
+
+
+11. We will notify if user has participated in the survey and has tracked in Quota requirements.
+
+  ```groovy
+    public class MainActivity extends AppCompatActivity implements ZampliaCallbacks {
+        @Override
+        public void onZAMQuotaFull() {
+            ...
+        }
+    }
+  ```
+
 
