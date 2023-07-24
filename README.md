@@ -60,7 +60,7 @@ After syncing your project with gradle files and importing Zamplia SDK classes y
     
 3. Show Offer
 
-Create Params instance with the below code snippet. Here, you need to pass API-KEY that is provided to you by Zamplia platform. <br/>You have to use sandbox key with sandbox environment and production key with production enviornment. <br/>Here you have to set Platform and transaction Id (session id to track the user). <br/><b>Code snippet as below :<b/>
+Create Params instance with the below code snippet. Here, you need to pass API-KEY that is provided to you by Zamplia platform. <br/>You have to use sandbox key with sandbox environment and production key with production enviornment. <br/>Here you have to set Platform and transaction Id (session id to track the user). <br/>Code snippet as below :
 
 
   ```groovy
