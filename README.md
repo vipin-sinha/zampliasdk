@@ -37,15 +37,16 @@ Add it in your root build.gradle at the end of repositories:
 
 #### Implement Zamplia in your code
 
-    1. Import Zamplia Classes
+1. Import Zamplia Classes
 
-        ```groovy
-        import com.zamplia.zampliasdk.ZampliaApp;
-        import com.zamplia.zampliasdk.builder.Params;
-        import com.zamplia.zampliasdk.callback.Environment;
-        import com.zamplia.zampliasdk.callback.SurveyData;
-        import com.zamplia.zampliasdk.callback.ZampliaCallbacks;
-        ```
+
+  ```groovy
+  import com.zamplia.zampliasdk.ZampliaApp;
+  import com.zamplia.zampliasdk.builder.Params;
+  import com.zamplia.zampliasdk.callback.Environment;
+  import com.zamplia.zampliasdk.callback.SurveyData;
+  import com.zamplia.zampliasdk.callback.ZampliaCallbacks;
+  ```
 
 
     2. Initialize Zamplia SDK
@@ -81,4 +82,4 @@ Add it in your root build.gradle at the end of repositories:
 
         The following are the methods this will override :
 
-        
+
