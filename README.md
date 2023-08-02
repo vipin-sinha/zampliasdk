@@ -10,7 +10,7 @@ Add it in your root build.gradle at the end of repositories:
   allprojects {
 		repositories {
 			...
-			maven { url 'https://jitpack.io' }
+			mavenCentral()
 		}
 	}
   ```
@@ -18,7 +18,7 @@ Add it in your root build.gradle at the end of repositories:
 
   ```groovy
     dependencies {
-      implementation("com.github.vipin-sinha:zampliasdk:1.0.0")
+      implementation 'com.zamplia:zampsdk:1.0.0'
       ...
      }
   ```
